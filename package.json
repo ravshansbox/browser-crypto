@@ -15,6 +15,7 @@
   "devDependencies": {
     "browserify-aes": "~1.2.0",
     "create-ecdh": "~4.0.0",
+    "safe-buffer": "~5.1.0",
     "webpack": "~4.29.0",
     "webpack-cli": "~3.2.0"
   }
