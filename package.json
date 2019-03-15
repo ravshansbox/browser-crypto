@@ -7,6 +7,12 @@
     "url": "https://github.com/ravshansbox/browser-crypto.git"
   },
   "license": "MIT",
+  "keywords": [
+    "browser",
+    "crypto",
+    "aes",
+    "cipher"
+  ],
   "main": "dist/browser-crypto.js",
   "scripts": {
     "build": "webpack -p",
