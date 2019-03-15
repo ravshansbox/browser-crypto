@@ -3,9 +3,9 @@
 Package contents:
 * Buffer
 * createECDH()
-* createCipher()
+* createCipher() (deprecated, use createCipheriv() instead)
 * createCipheriv()
-* createDecipher()
+* createDecipher() (deprecated, use createDecipheriv() instead)
 * createDecipheriv()
 
 Usage example:
