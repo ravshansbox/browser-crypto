@@ -8,5 +8,15 @@ module.exports = {
     library: 'browserCrypto',
     libraryTarget: 'umd',
     globalObject: 'this'
+  },
+  stats: {
+    children: false,
+    modules: false
+  },
+  devServer: {
+    stats: {
+      children: false,
+      modules: false
+    },
   }
 };
