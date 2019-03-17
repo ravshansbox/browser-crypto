@@ -15,7 +15,9 @@
   ],
   "main": "dist/browser-crypto.js",
   "scripts": {
-    "build": "webpack -p",
+    "build": "webpack --mode none --output-filename browser-crypto.js",
+    "build:min": "webpack --mode production --output-filename browser-crypto.min.js",
+    "prepublish": "npm run build && npm run build:min",
     "start": "webpack -dw"
   },
   "devDependencies": {
