@@ -2,6 +2,7 @@
 
 Package contents:
 * Buffer
+* getCiphers()
 * createECDH()
 * createCipher() (deprecated, use createCipheriv() instead)
 * createCipheriv()
