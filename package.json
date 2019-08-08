@@ -1,6 +1,6 @@
 {
   "name": "@ravshansbox/browser-crypto",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Node.js crypto module subset for browser",
   "repository": {
     "type": "git",
