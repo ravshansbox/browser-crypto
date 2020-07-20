@@ -6,16 +6,19 @@ module.exports = {
     path: path.resolve(__dirname, 'dist'),
     library: 'browserCrypto',
     libraryTarget: 'umd',
-    globalObject: 'this'
+    globalObject: 'this',
+  },
+  performance: {
+    hints: false,
   },
   stats: {
     children: false,
-    modules: false
+    modules: false,
   },
   devServer: {
     stats: {
       children: false,
-      modules: false
+      modules: false,
     },
-  }
+  },
 };
