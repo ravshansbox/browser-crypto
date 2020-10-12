@@ -1,26 +1,26 @@
-import { Buffer as _Buffer } from 'safe-buffer';
-import _createECDH from 'create-ecdh/browser';
 import {
-  getCiphers as _getCiphers,
   createCipher as _createCipher,
   createCipheriv as _createCipheriv,
   createDecipher as _createDecipher,
-  createDecipheriv as _createDecipheriv
+  createDecipheriv as _createDecipheriv,
+  getCiphers as _getCiphers,
 } from 'browserify-aes/browser';
+import _createECDH from 'create-ecdh/browser';
+import { Buffer as _Buffer } from 'safe-buffer';
 
-export const Buffer = _Buffer;
-export const createECDH = _createECDH;
-export const getCiphers = _getCiphers;
-export const createCipher = _createCipher;
-export const createCipheriv = _createCipheriv;
-export const createDecipher = _createDecipher;
-export const createDecipheriv = _createDecipheriv;
+export var Buffer = _Buffer;
+export var createECDH = _createECDH;
+export var getCiphers = _getCiphers;
+export var createCipher = _createCipher;
+export var createCipheriv = _createCipheriv;
+export var createDecipher = _createDecipher;
+export var createDecipheriv = _createDecipheriv;
 export default {
-  Buffer,
-  getCiphers,
-  createECDH,
-  createCipher,
-  createCipheriv,
-  createDecipher,
-  createDecipheriv
+  Buffer: Buffer,
+  getCiphers: getCiphers,
+  createECDH: createECDH,
+  createCipher: createCipher,
+  createCipheriv: createCipheriv,
+  createDecipher: createDecipher,
+  createDecipheriv: createDecipheriv,
 };
