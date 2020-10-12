@@ -13,7 +13,6 @@ module.exports = {
   },
   resolve: {
     fallback: {
-      buffer: false,
       stream: false,
     },
   },
