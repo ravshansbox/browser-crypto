@@ -11,6 +11,12 @@ module.exports = {
   performance: {
     hints: false,
   },
+  resolve: {
+    fallback: {
+      buffer: false,
+      stream: false,
+    },
+  },
   stats: {
     children: false,
     modules: false,
