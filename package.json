@@ -18,17 +18,16 @@
   ],
   "main": "dist/browser-crypto.js",
   "scripts": {
-    "build": "browserify src/index.js > dist/browser-crypto.js",
-    "build:min": "browserify src/index.js | uglifyjs -c > dist/browser-crypto.min.js",
+    "build": "webpack --output-library browserCrypto --output-library-target umd src/index.js dist/browser-crypto.js",
+    "build:min": "webpack -p --output-library browserCrypto --output-library-target umd src/index.js dist/browser-crypto.min.js",
     "prepare": "npm run build && npm run build:min"
   },
   "devDependencies": {
-    "browserify": "^17.0.0",
     "browserify-aes": "^1.2.0",
     "create-ecdh": "^4.0.4",
     "pbkdf2": "^3.1.1",
     "safe-buffer": "^5.2.1",
-    "uglify-js": "^3.13.1"
+    "webpack": "^3.12.0"
   },
   "files": [
     "dist/browser-crypto.js",

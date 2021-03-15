@@ -1,16 +1,20 @@
 # Node.js 'crypto' module subset for browser
 
 Package contents:
-* Buffer
-* getCiphers()
-* createECDH()
-* createCipher() (deprecated, use createCipheriv() instead)
-* createCipheriv()
-* createDecipher() (deprecated, use createDecipheriv() instead)
-* createDecipheriv()
+
+- Buffer
+- getCiphers()
+- createECDH()
+- createCipher() (deprecated, use createCipheriv() instead)
+- createCipheriv()
+- createDecipher() (deprecated, use createDecipheriv() instead)
+- createDecipheriv()
+- pbkdf2
+- pbkdf2Sync
 
 Usage example:
-~~~~
+
+```
 import { Buffer, createECDH, createCipheriv, createDecipheriv } from 'browser-crypto';
 
 const ecdh1 = createECDH('secp256k1');
@@ -31,4 +35,13 @@ const encrypted = Buffer.concat([cipher.update(data), cipher.final()]);
 const decipher = createDecipheriv('aes256', secret2, iv);
 const decrypted = Buffer.concat([decipher.update(encrypted), decipher.final()]);
 console.log(decrypted.toString());
-~~~~
+
+const derivedKey = pbkdf2('password', 'salt', 1, 32, 'sha512', (error, derivedKey) => {
+  if (error) throw error;
+  console.log(derivedKey);
+});
+
+const derivedKey = pbkdf2Sync('password', 'salt', 1, 32, 'sha512');
+console.log(derivedKey);
+
+```
