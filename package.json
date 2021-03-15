@@ -8,10 +8,13 @@
   },
   "license": "MIT",
   "keywords": [
-    "browser",
-    "crypto",
     "aes",
-    "cipher"
+    "browser",
+    "buffer",
+    "cipher",
+    "crypto",
+    "ecdh",
+    "pbkdf2"
   ],
   "main": "dist/browser-crypto.js",
   "scripts": {
@@ -23,6 +26,7 @@
     "browserify": "^17.0.0",
     "browserify-aes": "^1.2.0",
     "create-ecdh": "^4.0.4",
+    "pbkdf2": "^3.1.1",
     "safe-buffer": "^5.2.1",
     "uglify-js": "^3.13.1"
   },
