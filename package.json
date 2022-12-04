@@ -1,6 +1,6 @@
 {
   "name": "browser-crypto",
-  "version": "1.4.0",
+  "version": "2.0.0",
   "description": "Node.js crypto module subset for browser",
   "repository": {
     "type": "git",
@@ -16,21 +16,29 @@
     "ecdh",
     "pbkdf2"
   ],
-  "main": "dist/browser-crypto.js",
+  "main": "dist/index.js",
   "scripts": {
-    "build": "webpack --output-library browserCrypto --output-library-target umd src/index.js dist/browser-crypto.js",
-    "build:min": "webpack -p --output-library browserCrypto --output-library-target umd src/index.js dist/browser-crypto.min.js",
-    "prepare": "npm run build && npm run build:min"
+    "build": "rollup -c",
+    "prepare": "yarn build"
   },
   "devDependencies": {
+    "@rollup/plugin-commonjs": "^23.0.3",
+    "@rollup/plugin-json": "^5.0.2",
+    "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-terser": "^0.1.0",
     "browserify-aes": "^1.2.0",
+    "buffer": "^6.0.3",
     "create-ecdh": "^4.0.4",
-    "pbkdf2": "^3.1.1",
-    "safe-buffer": "^5.2.1",
-    "webpack": "^3.12.0"
+    "pbkdf2": "^3.1.2",
+    "prettier": "^2.8.0",
+    "rollup": "^3.5.1",
+    "rollup-plugin-polyfill-node": "^0.11.0"
+  },
+  "prettier": {
+    "singleQuote": true
   },
   "files": [
-    "dist/browser-crypto.js",
-    "dist/browser-crypto.min.js"
+    "dist/index.js",
+    "dist/index.min.js"
   ]
 }
