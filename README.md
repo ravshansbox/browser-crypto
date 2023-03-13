@@ -15,7 +15,22 @@ Package contents:
 Usage example:
 
 ```
-import { Buffer, createECDH, createCipheriv, createDecipheriv } from 'browser-crypto';
+const {
+  Buffer,
+  createECDH,
+  createCipheriv,
+  createDecipheriv,
+  pbkdf2,
+  pbkdf2Sync,
+} = window.browserCrypto;
+// import {
+//   Buffer,
+//   createECDH,
+//   createCipheriv,
+//   createDecipheriv,
+//   pbkdf2,
+//   pbkdf2Sync,
+// } from 'browser-crypto';
 
 const ecdh1 = createECDH('secp256k1');
 const ecdh2 = createECDH('secp256k1');
@@ -36,7 +51,7 @@ const decipher = createDecipheriv('aes256', secret2, iv);
 const decrypted = Buffer.concat([decipher.update(encrypted), decipher.final()]);
 console.log(decrypted.toString());
 
-const derivedKey = pbkdf2('password', 'salt', 1, 32, 'sha512', (error, derivedKey) => {
+pbkdf2('password', 'salt', 1, 32, 'sha512', (error, derivedKey) => {
   if (error) throw error;
   console.log(derivedKey);
 });
